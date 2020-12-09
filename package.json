@@ -1,0 +1,16 @@
+{
+  "name": "accordeon",
+  "version": "1.0.0",
+  "description": "A simple accordeon system make with typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "accordeon",
+    "typescript",
+    "nojquery"
+  ],
+  "author": "Médéric Bellemare",
+  "license": "ISC"
+}
