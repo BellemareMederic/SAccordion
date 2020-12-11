@@ -1,4 +1,16 @@
-.tab_body {
+.saccordion {
+}
+.saccordion__button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px 10px;
+  border: none;
+}
+.saccordion__tab {
   overflow: hidden;
   transition: height 0.8s ease;
+}
+.saccordion__tab__content {
+  margin: 10px 10px;
 }

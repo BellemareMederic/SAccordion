@@ -3,13 +3,17 @@ import { Tab } from "./Tab.js";
 export class Accordion {
   maxTab: number;
   activeTab: Tab[] = [];
+  tabInstances: Tab[] = [];
 
-  constructor(element: HTMLElement, index: number, maxTab: number = 1) {
+  constructor(element: HTMLElement, maxTab: number = 1) {
     this.maxTab = maxTab;
 
-    for (const tab of element.querySelectorAll("div")) {
+    for (const tab of element.querySelectorAll(
+      "[data-accordion]>div"
+    ) as NodeListOf<HTMLElement>) {
       let tabInstance = new Tab(tab);
-      tabInstance.head.addEventListener("click", (_) =>
+      this.tabInstances.push(tabInstance);
+      tabInstance.button.addEventListener("click", (_) =>
         this.tabTrigger(tabInstance)
       );
     }
